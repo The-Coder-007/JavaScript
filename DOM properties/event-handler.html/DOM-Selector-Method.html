@@ -1,0 +1,17 @@
+<p class="p1">Hello</p>
+<p class="p1">Hello</p>
+<p class="p1">Hello</p>
+
+<button>Enter</button>
+
+<script>
+	document.querySelector('button').onclick = ()=>{
+	
+		console.log(document.getElementsByClassName('p1'));
+		var allPara = document.getElementsByClassName('p1');
+		allPara[0].innerHTML = ' <b> Test </b> data';
+		allPara[1].style.border = 'solid';
+		allPara[2].remove();
+		
+	};
+</script>

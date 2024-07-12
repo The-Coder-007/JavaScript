@@ -1,0 +1,47 @@
+<ul>
+	<li class="message"></li>
+	<li>
+		<input type ="text" id="x1" />
+		
+	</li>
+	<li>
+		<button>Enter</button>
+	</li>
+	<p></p>
+</ul>
+
+<script>
+
+	var sum = 0 ;
+	function captcha(){
+		var no1 = Math.floor(100*Math.random());
+		console.log(no1);
+		
+		var no2 = Math.floor(10*Math.random());
+		console.log(no2);
+		
+		var msg = `Enter ${no1}+${no2}`;
+		console.log(msg);
+		
+		document.querySelector('.message').innerHTML = msg;
+		sum = no1 + no2;
+		
+	};
+	
+	captcha();
+	
+	document.querySelector('button').onclick = function(){
+		var textData = document.querySelector('#x1').value;
+		
+		if (textData != sum){
+			errMsg = 'Invalid';
+		}
+		else{
+			errMsg = 'Valid';
+		};
+		
+		console.log(errMsg);
+		document.querySelector('p').innerHTML = errMsg;
+	};
+
+</script>

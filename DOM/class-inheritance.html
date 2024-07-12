@@ -1,0 +1,33 @@
+<script>
+
+class TV{
+
+    sound(){
+        console.log("dolby sound");
+    }
+    valume(){
+        console.log("valume");
+    }
+    brightness(){
+        console.log("brightness");
+    }
+
+
+}
+
+class smartTv extends TV {
+    port(){
+        console.log("HDMI and VGA");
+    }
+
+}
+
+var remote = new smartTv();
+// console.log(remote);
+
+remote.port();
+remote.sound();
+remote.valume();
+remote.brightness();
+
+</script>

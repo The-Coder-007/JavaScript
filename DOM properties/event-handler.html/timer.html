@@ -1,0 +1,41 @@
+<style>
+div{
+	border: solid;
+	padding: 50px;
+	font-size: 100px;
+}
+</style>
+
+<div>
+0
+</div>
+
+<script>
+
+	var inData ;
+	function slider(){
+	
+		var counter = 0;
+		inData = setInterval(()=>{
+			if (counter == 4){
+				counter = 0;
+			}
+			document.querySelector('div').innerText = counter;
+			counter++ ;
+			
+		} , 1000);
+		
+	
+	}
+	slider();
+	
+	document.querySelector('div').onmouseenter = function(){
+		clearInterval(inData);
+	};
+	document.querySelector('div').onmouseleave = function(){
+		slider();
+		
+	};
+	
+
+</script>

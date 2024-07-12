@@ -1,0 +1,33 @@
+<div onclick="myfunc()">
+	<img src="https://th.bing.com/th?id=ORMS.9e93880fb43d4b91403349c2804e8f9d&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1.25&p=0" alt="" >
+	<h2>3000</h2>
+	<p>Printers</p>
+	<p>
+	<button onclick="myfunc1()">Add to cart</button>
+	</p>
+</div>
+
+<style>
+div{
+	min-width : 200px;
+	border:solid;
+	min-height:200px;
+	text-align: center;
+	
+};
+</style>
+
+<script>
+
+	function myfunc1(){
+		console.log('Add to cart');
+		console.log(event);
+		<!-- event.cancelBubble = true; -->
+		event.stopPropagation();
+	};
+	
+	function myfunc(){
+		console.log('Open model box');
+	};
+
+</script>

@@ -1,0 +1,30 @@
+<button>Login</button>
+
+<div class="box">
+	Login div
+</div>
+
+<style>
+	.box{
+		width:200px;
+		border: solid;
+		height:80px
+	}
+</style>
+
+<script>
+	var boxDiv = document.querySelector('.box');
+	
+	boxDiv.style.display="none";
+	
+	setTimeout(()=>{
+		<!-- console.log(Math.random()); -->
+		boxDiv.style.display = 'block';
+		setTimeout(()=>{
+		<!-- console.log(Math.random()); -->
+		boxDiv.style.display = 'none';
+	}, 3000);
+	
+	}, 3000);
+	
+</script>

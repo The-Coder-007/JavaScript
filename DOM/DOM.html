@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<titale>DOM </title>
+
+</head>
+<body></body>
+<h1 id="x1">Hello</h1>
+<p id="x2">This is para</p>
+<button onclick="myfunc()">Enter</button>
+<p id="x3">lorem the espum d wenchi etc ajkljlkdhfd kjdhdhffkj hbdbfkjh dhkj iukjb jd hj</p>
+
+<script>
+function myfunc(){
+	console.log('test');
+	console.log(document);
+	console.log(document.getElementById('x1'));
+	document.getElementById('x1').style.background='gray';
+
+	document.getElementById('x1').style.fontSize='40px';	
+	document.getElementById('x1').className='xyz';
+	
+	document.getElementById('x2').innerText = 'this is another para';
+	document.getElementById('x2').innerText= 'hello <b>World</b>';
+	document.getElementById('x2').innerHTML = `<b>Hello world, i am bold</b>  <i>This is italic.</i> <u>This is underline text</u>`;
+	document.getElementById('x3').style.display='none'; //only hide from body 
+	document.getElementById('x3').remove(); // hide from dom and html doc also
+}
+</script>
+
+<style>
+#x1{
+border:solid;
+}
+
+.xyz{width:200px;
+height:200px;}
+
+</style>
+</html>

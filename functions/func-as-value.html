@@ -1,0 +1,18 @@
+<script>
+
+function myfunc(a,b,c){
+
+    console.log(a);
+    console.log(b);
+    console.log(typeof c);
+
+    c();
+}
+
+// first class func
+
+myfunc(10, 'Hello', function(){
+    console.log('func called');
+})
+
+</script>

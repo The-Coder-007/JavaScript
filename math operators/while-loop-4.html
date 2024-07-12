@@ -1,0 +1,29 @@
+<script>
+
+// Fibonacci Series
+/*
+0 1 1 2 3 5 8 13 21
+
+z = x=y
+*/
+
+'use strict';
+
+var i = 1;
+
+var x = 0;
+var y = 1;
+
+while (i<=10){
+
+    var z = x+y;
+    document.write(z ," ");
+
+    i++; // i = i+1
+
+    x=y;
+    y=z;
+
+}
+
+</script>

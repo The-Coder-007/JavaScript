@@ -1,0 +1,14 @@
+<script>
+
+function myfunc(P, D, cb){
+    var finalPrice = P-(P*D/100);
+    // console.log(finalPrice);
+    cb(finalPrice);
+}
+
+myfunc(1200, 20, (result)=>{
+    console.log('callback called');
+    console.log(result);
+})
+
+</script>

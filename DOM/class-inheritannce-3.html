@@ -1,0 +1,45 @@
+<script>
+
+    class TV{
+
+        constructor(){
+            console.log("No Channel");
+        }
+    
+        sound(){
+            console.log("dolby sound");
+        }
+        valume(){
+            console.log("valume");
+        }
+        brightness(){
+            console.log(" parrent brightness");
+        }
+    
+    
+    }
+    
+    class smartTv extends TV {
+        constructor(){
+            super();
+            console.log("Brand Name");
+            console.log(this);
+            
+        }
+
+        port(){
+            console.log("HDMI and VGA");
+        }
+
+        
+    }
+    
+    var remote = new smartTv();
+    // console.log(remote);
+    
+    remote.port();
+    remote.sound();
+    remote.valume();
+    remote.brightness();
+    
+    </script>

@@ -1,0 +1,31 @@
+<script>
+// spread operator
+var arr1=['Nike', 'Puma'];
+var arr2=['Adidas', 'Allen-Solley','Nike'];
+
+var arr3=[...arr1, ...arr2];
+
+console.log(arr3);
+
+var userinfo1 = {name:"mahboob", age: 22 , place: "mumbai"}
+var userinfo2 = {role:"developer", hobbies: 'reading' , place: "gorakhpur"}
+
+var userinfo = {...userinfo1, ...userinfo2};
+console.log(userinfo);
+
+// rest parameter
+
+// function fullName(fname, mname, lname){
+
+//     console.log(fname, mname , lname);
+
+// }
+
+function fullName(fname , ...record){
+    console.log(fname);
+    console.log(record);
+}
+
+fullName('ashok', 'manish', 'kashyap');
+
+</script>

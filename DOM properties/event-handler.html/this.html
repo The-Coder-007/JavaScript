@@ -1,0 +1,58 @@
+<button onclick="myfunc1(this)"> Enter </button>
+
+<p id="p1">
+	lorem kldskldmfkldmf fkhd fsdksflk dskf jlkds fkjlkf sf jlk s fjklafajf lkdfj dfj lkafj jf lj fjlakj jfkd fjdlsjdkfj 
+</p>
+
+<p id="p2">
+	LOOFOSDF ISDNFKN SDFJNJD JFDNJSD JDKFNKDJ JDFNKN JDFNKS JFKJD SM FKJDSFK DSKFJKDB KFJDFK  FDJD SFK 
+</p>
+
+<script>
+
+	console.log(typeof this);
+	console.log(this);
+	
+	function myfunc(){
+		console.log("In Function");
+		console.log(this);
+	};
+	
+	myfunc();
+	
+	if(3>2){
+		console.log("In Block Function");
+		console.log(this);
+	};
+	
+	function myfunc1(rec){
+		console.log(typeof rec);
+		console.log(rec);
+		rec.style.border='solid';
+	};
+	
+	var userinfo = {
+		name:"Akshay",
+		age:20,
+		showData:function(){
+			console.log('func called');
+			console.log(this);
+			console.log(this.name, this.age);
+			
+		}
+	};
+	console.log(userinfo);
+	userinfo.showData();
+	
+	document.getElementById('p1').onmouseenter = function (){
+		console.log(this);
+		this.style.border="solid";
+	};
+	
+	document.getElementById('p2').onmouseenter = ()=>{
+		console.log(this);
+		<!-- this.style.border="solid"; -->
+	};
+	
+
+</script>

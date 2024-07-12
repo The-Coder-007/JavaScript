@@ -1,0 +1,33 @@
+<script>
+
+    var user = {
+        show:function(){
+            return this.fname + " " + this.lname
+        },
+        showFullName:function(mname , village){
+            return this.fname + " " + mname + " " + this.lname + " " + village;
+        }
+
+    }
+
+    var u1 = {
+        fname : "Akshay",
+        lname : "Kumar"
+    }
+   
+    var u2 = {
+        fname : "Akshay",
+        
+        lname : "Kumar"
+    }
+
+    var ans = user.show.call(u1);
+    console.log(ans);
+
+    var ans = user.showFullName.call(u2 , "Ramesh" , "mumbai");
+    console.log(ans);
+
+
+    
+
+</script>

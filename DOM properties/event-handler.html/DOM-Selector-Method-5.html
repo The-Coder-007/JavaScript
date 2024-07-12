@@ -1,0 +1,21 @@
+<input type="text"
+       name="textData"/>
+<br/>
+<input type="text"
+       name="textData"/>
+</br>
+<input type="text"
+       name="textData"/>
+<button>Enter
+</button>
+<script>
+	document.querySelector('button').onclick = ()=>{
+		console.log(document.getElementsByName('textData'));
+		var text =document.getElementsByName('textData');
+		text[0].value=1000;
+		text[1].style.border="solid";
+		text[2].remove();
+		
+	};
+
+</script>

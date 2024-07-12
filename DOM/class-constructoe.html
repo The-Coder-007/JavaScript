@@ -1,0 +1,39 @@
+<script>
+
+    // var rec = new Array();
+    // console.log(typeof rec);
+    // console.log(rec);
+
+    class TV{
+        constructor(){
+            console.log('TV Red light alert');
+            // console.log(this);
+            this.channel = "no Channel";
+        }
+
+        valume(){
+            console.log("increase Valume");
+        }
+
+        showChannel(){
+            console.log(this.channel);
+        }
+
+        setChannel(channelName){
+            this.channel = channelName;
+
+        }
+
+    }
+
+    var remote = new TV();
+    console.log(typeof remote);
+    console.log(remote);
+
+    remote.valume();
+    remote.showChannel();
+    remote.setChannel('sony TV');
+    remote.showChannel();
+
+
+</script>

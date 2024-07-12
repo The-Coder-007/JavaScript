@@ -1,0 +1,37 @@
+<script>
+
+class TV{
+    // methods
+    channel(){
+        console.log("sony TV");
+    };
+
+    valume(){
+        console.log('Dolby Sound');
+    }
+
+    show(){
+        console.log("this defined all");
+        console.log(this);
+        this.channel();
+        this.valume();
+    }
+
+}
+
+var remote = new TV();
+
+console.log(typeof remote);
+console.log(remote);
+
+remote.channel();
+remote.valume();
+remote.show();
+
+var rec = new Date();
+console.log(typeof rec);
+console.log(rec);
+
+console.log(rec.getMonth());
+
+</script>

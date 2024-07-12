@@ -1,0 +1,60 @@
+<ul>
+	<li class="message"></li>
+	<li>
+		<input type ="text" id="x1" />
+		
+	</li>
+	<li>
+		<button>Enter</button>
+	</li>
+	<p></p>
+</ul>
+
+<script>
+
+	var sum = 0 ;
+	function captcha(){
+		var arr = ['a','b','c','d','e','f','g','h','I','J','K','L','M','N','O','P',1,3,4,5,6,7,8,2];
+			
+			<!-- console.log(arr); -->
+			<!-- console.log(arr.length); -->
+			<!-- console.log(arr.length*Math.random()); -->
+			<!-- console.log(Math.floor(arr.length* Math.random())); -->
+			
+			
+		var i = 1;
+ 		
+		var str = '';
+		
+		while(i<=5){
+			var indexNo = Math.floor(arr.length* Math.random());
+			<!-- console.log(indexNo , arr[indexNo]); -->
+			
+			str = str + arr[indexNo];
+			i++;
+		}
+		
+		console.log(str);
+		
+		document.querySelector('.message').innerHTML = `Enter${str}`;
+		sum = str;
+		
+	};
+	
+	captcha();
+	
+	document.querySelector('button').onclick = function(){
+		var textData = document.querySelector('#x1').value;
+		
+		if (textData != sum){
+			errMsg = 'Invalid';
+		}
+		else{
+			errMsg = 'Valid';
+		};
+		
+		console.log(errMsg);
+		document.querySelector('p').innerHTML = errMsg;
+	};
+
+</script>

@@ -1,0 +1,34 @@
+<script>
+
+//  1 2 x 4 y x 7 8 x y 11 x 13 14 xy
+
+// console.log(15 % 3 == 0  && 15 % 5 == 0);
+
+var no =1;
+
+while ( no <= 15){
+    if (no % 3 ==0 && no % 5  ==0 ){
+        console.log(no , "xy");
+        document.write("&nbsp; xy  &nbsp;");
+    }
+    else if(no % 3 ==0 ){
+        console.log(no , "x");
+        document.write("&nbsp; x  &nbsp;");
+    }
+    else if (no % 5 ==0){
+        console.log(no , "y");
+        document.write("&nbsp; y  &nbsp;");
+    }
+    else{
+        console.log(no);
+        document.write('&nbsp;')
+        document.write(no)
+        document.write('&nbsp;')
+
+    }
+
+    no = no+1;
+}
+
+
+</script>

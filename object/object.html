@@ -1,0 +1,51 @@
+<script>
+
+var product = {
+
+    name: 'Men printed t shirt',
+    price: 1200,
+    discountedPrice: 300,
+    brand: 'Reya',
+    path:"https://tpc.googlesyndication.com/simgad/1675980580533340206",
+    size: ['xl', 'l', 'xxl', 'm']
+}
+
+console.log(typeof product);
+console.log(product);
+
+console.log(product.price);
+console.log(product['price']);
+
+// destructing object
+var {price, name , discountedPrice, brand, path, size}= product;
+document.write(`
+<div>
+    
+    <img src="${path}"/>
+    <h2><del>${price}</del>${discountedPrice}</h2>
+    <p><b>${brand}</b></p>
+    <p>${name}</p>
+    <p>size:${size.join(",").toUpperCase()}</p>
+    <button>${"Add to cart"}</button>
+    </div>
+`)
+
+</script>
+
+<style>
+    div{
+        width: 300px;
+        
+        margin:200px auto;
+        text-align: center;
+        border: 1px solid black;
+    }
+    div > img{
+        width: 150px;
+        height: 200px;
+        
+    }
+    div:hover{
+        box-shadow: 10px 20px 10px gray;
+    }
+</style>

@@ -1,0 +1,34 @@
+<script>
+
+    no = 6 ;
+    
+    if (no < 0){
+        msg = "Negative";
+    }
+    else if (no < 10){
+        msg = "Single Digite";
+    }
+    else if(no<100){
+        msg = "Two Digit number";
+    }
+    else{
+        msg = "Multi Digit";
+    }
+
+    switch(msg){
+        case "Negative":
+            console.log(Math.abs(no));
+            break;
+        
+            case "Single Digite":
+            console.log(no**2);
+            break;
+        
+            case "Two Digit number":
+            console.log(Math.sqrt(no));
+            break;
+            default:
+                console.log(no);
+    }
+
+</script>

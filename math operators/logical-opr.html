@@ -1,0 +1,34 @@
+<script>
+
+console.log(3 > 2 , "3>2"); // true
+console.log(3 > 10 , "3>10"); //false
+console.log(3 >= 3 , "3>=3"); //true 
+
+console.log(4<=10 , "4<=10"); // true
+
+//CAMPARISON OPERATOR
+console.log(4==10 , "4==10"); // false 4 is not equal to 10
+console.log(4==4 , "4==4");  // true 4 is equal to 4
+console.log(4=='4' , "4=='4'"); // true (==  its comparing in number only)
+console.log(4==='4' , "4==='4'"); // false (=== its comparing numbers and data types both)
+
+console.log(4!=4 , "4!=4"); // false (! not )
+console.log(4!=40 , "4!=40"); // true 
+
+console.log(4!="4" , "4!='4'"); // false (!=) means (is not ==)
+console.log(4!=="4" , "4!=='4'"); // true (!==) means (is not ===) comparing data types n numbers both
+
+console.log( 3>2 && 90>34 , " 3>2 && 90>34"); // (&& = and) both are right then true
+console.log( 3>20 && 90>34 , " 3>20 && 90>34"); // if any value is incorrect then its false
+console.log( 3>20 || 90>34 , " 3>20 || 90>34"); // (|| = OR) any value are right then its true
+console.log( 3>20 || 90>34 && 8==8 , " 3>20 || 90>34 && 8==8");
+
+//SHORT CERCUIT OPERATOR
+
+var x = ( 20==20 ) || 30;
+console.log(x); // true
+
+var x = (20!=20) || 30;
+console.log(x); // 30 
+
+</script>

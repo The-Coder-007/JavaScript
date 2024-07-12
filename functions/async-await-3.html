@@ -1,0 +1,23 @@
+<script>
+
+async function apiData (path){
+    var rec = await fetch('https://fakestoreapi.com/'+path);
+
+    var result = await rec.json();
+
+    return result;
+}
+
+var ans = apiData("products/categories");
+
+ans.then((val)=>{
+    console.log(val);
+})
+
+var ans = apiData("products")
+
+ans.then((val)=>{
+    console.log(val);
+})
+
+</script>

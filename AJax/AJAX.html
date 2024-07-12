@@ -1,0 +1,67 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<div class="container">
+    <input type="text" class="form-control" name="xyz">
+    <button class="btn btn-warning">
+        Enter
+    </button>
+
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="row">
+
+    </div>
+</div>
+
+<script>
+
+    document.querySelector('button').onclick = function () {
+
+        // console.log(document.getElementsByName('xyz'));
+        var catName = document.getElementsByName('xyz')[0].value;
+        console.log(catName);
+        var path = fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>console.log(json));
+        // console.log(path)
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.status == 200 && xmlhttp.readyState == 4) {
+                // console.log(xmlhttp.responseText);
+
+                var ans = JSON.parse(xmlhttp.responseText);
+                // console.log(ans)
+                document.querySelector('.row').innerHTML = "";
+                ans.forEach(val => {
+                    // console.log(val)
+                    var divTag = document.createElement('div');
+                    divTag.className = 'col-md-3 text center';
+
+                    var hTag = document.createElement('h1');
+                    hTag.src = val.price;
+                    hTag.className = 'text-center';
+
+                    var para = document.createElement('p');
+                    para.innerHTML = val.title;
+
+                    divTag.append(hTag);
+                    divTag.append(para);
+
+                    document.querySelector('.row').append(divTag);
+
+                });
+
+            }
+
+        }
+        xmlhttp.open('get', path, true);
+        xmlhttp.send();
+    }
+
+</script>

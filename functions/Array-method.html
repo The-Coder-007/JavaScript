@@ -1,0 +1,31 @@
+<script>
+
+var arr1 = [1,2,3,4];
+//1 8 27 64 [1 , 8, 9, 64]
+
+console.log(arr1);
+
+// arr1.map((value, i )=> {
+//     console.log(value, i);
+// })
+
+var result = arr1.map(value=> value**3)
+// [1,8]
+
+console.log(result);
+
+var arr2 = [10, 34, 54, 87, 83, 96, 39];
+var result= arr2.filter(value=> value>= 40 && value<=60);
+console.log(result);
+
+var arr2 = [10, 34, 54, 87, 83, 96, 39];
+var result= arr2.find(value=> value> 40);
+console.log(result);
+
+var arr2 = [10, 34, 54, 87, 83, 96, 39];
+var result= arr2.findIndex(value=> value>40);
+console.log(result);
+
+
+
+</script>

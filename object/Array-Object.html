@@ -1,0 +1,77 @@
+
+
+<script>
+
+    var product = [
+        {
+            name: 'Men printed t shirt',
+            price: 1200,
+            discountedPrice: 300,
+            brand: 'Reya',
+            path: "https://tpc.googlesyndication.com/simgad/1675980580533340206",
+            size: ['xl', 'l', 'xxl', 'm']
+        },
+        {
+            name: 'Men printed t shirt',
+            price: 1300,
+            discountedPrice: 300,
+            brand: 'sreya',
+            path: "https://tpc.googlesyndication.com/simgad/1675980580533340206",
+            size: ['xxl', 'm']
+        },
+        {
+            name: 'Men printed t shirt',
+            price: 1500,
+            discountedPrice: 300,
+            brand: 'preya',
+            path: "https://tpc.googlesyndication.com/simgad/1675980580533340206",
+            size: ['xl', 'l']
+        }
+    ]
+    // console.log(product);
+
+    if (product.length > 0) {
+        document.write(`
+        <div class="container">
+            <div class="row">
+        `);
+
+
+        for (value of product) {
+            console.log(value);
+            var { path, price, brand } = value;
+            document.write(`
+                <div class="col-xl-3 text-center">
+                    
+                    <img src="${path}" />
+                    <h1>${brand}</h1>
+                    <p>${price}</p>
+                    <p> <button> Add to Cart </button> </p>
+                    </div>
+                `)
+        }
+        document.write(`
+        </div>
+        </div>
+        `);
+    }
+
+</script>
+
+<style>
+    .container{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+   
+    .col-xl-3>img{
+        width: 150px;
+        height: 200px;
+    }
+
+
+
+    
+</style>
